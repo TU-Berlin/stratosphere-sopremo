@@ -54,6 +54,19 @@
 		<ozone.version>0.4-SNAPSHOT</ozone.version>
 	</properties>
 
+    <repositories>
+        <repository>
+            <id>cloudera-releases</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 	<dependencies>
 		<!--<dependency> <groupId>eu.stratosphere</groupId> <artifactId>ozone</artifactId> 
 			<version>0.2</version> </dependency> -->
@@ -129,19 +142,25 @@
 			<artifactId>hamcrest-all</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.0.0-cdh4.2.0</version>
+        </dependency>
 	</dependencies>
 
 	<dependencyManagement>
 		<!-- this section defines the module versions that are used if nothing 
 			else is specified. -->
 		<dependencies>
-			<dependency>
+			<!--<dependency>
 				<groupId>org.apache.hadoop</groupId>
 				<artifactId>hadoop-core</artifactId>
 				<version>0.20.203.0</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>
+			</dependency>-->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -195,6 +214,7 @@
 				<artifactId>hamcrest-all</artifactId>
 				<version>1.3</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

@@ -30,10 +30,10 @@
 			<artifactId>meteor-meteor</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
       		<groupId>org.apache.hadoop</groupId>
       		<artifactId>hadoop-core</artifactId>
-    	</dependency>
+    	</dependency>-->
     	<dependency>
 	      <groupId>org.eclipse.jetty</groupId>
 	      <artifactId>jetty-server</artifactId>
