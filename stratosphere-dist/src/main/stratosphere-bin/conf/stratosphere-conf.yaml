@@ -35,7 +35,7 @@ jobmanager.web.port: 8081
 #                                                   TASK MANAGER (WORKERs)
 #=======================================================================================================================
 
-taskmanager.rpc.port: 6122
+taskmanager.rpc.port: 6124
 
 # JVM heap size in MB
 taskmanager.heap.mb: 512
