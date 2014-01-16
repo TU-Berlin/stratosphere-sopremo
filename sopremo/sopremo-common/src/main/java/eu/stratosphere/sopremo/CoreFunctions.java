@@ -805,4 +805,22 @@ public class CoreFunctions implements BuiltinProvider {
 			return this.result;
 		}
 	};
+
+    public static final ADD_TO_ARRAY ADD_TO_ARRAY = new ADD_TO_ARRAY();
+
+    @Name(noun = "addToArray")
+    public static class ADD_TO_ARRAY extends SopremoFunction2<IJsonNode, BooleanNode> {
+        ADD_TO_ARRAY() {
+            super("addToArray");
+        }
+
+        @Override
+        protected IJsonNode call(IJsonNode input, BooleanNode condition) {
+            IArrayNode<IJsonNode> array = new ArrayNode<IJsonNode>();
+            if (condition.getBooleanValue()) {
+                array.add(input);
+            }
+            return array;
+        }
+    };
 }
