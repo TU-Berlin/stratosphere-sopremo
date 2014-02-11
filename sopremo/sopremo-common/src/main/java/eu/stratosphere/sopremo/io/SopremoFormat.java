@@ -487,11 +487,11 @@ public abstract class SopremoFormat extends ConfigurableSopremoType {
 
 		/*
 		 * (non-Javadoc)
-		 * @see eu.stratosphere.api.io .FileOutputFormat#open(int)
+		 * @see eu.stratosphere.api.io .FileOutputFormat#open(int, int)
 		 */
 		@Override
-		public void open(final int taskNumber) throws IOException {
-			super.open(taskNumber);
+		public void open(final int taskNumber, final int numtasks) throws IOException {
+			super.open(taskNumber, numtasks);
 
 			this.open(this.stream, taskNumber);
 		}
