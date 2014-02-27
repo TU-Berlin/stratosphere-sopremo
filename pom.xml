@@ -60,6 +60,18 @@
 			<version>0.2</version> </dependency> -->
 
         <dependency>
+            <groupId>eu.stratosphere</groupId>
+            <artifactId>meteor-scheduler-common</artifactId>
+            <version>0.5-hadoop2-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>eu.stratosphere</groupId>
+            <artifactId>meteor-scheduler-server</artifactId>
+            <version>0.5-hadoop2-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>1.1.1</version>
