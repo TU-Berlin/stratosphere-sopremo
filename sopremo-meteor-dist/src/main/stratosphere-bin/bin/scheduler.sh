@@ -47,7 +47,7 @@ case $STARTSTOP in
                         fi
                 fi
                 echo Starting Scheduler
-		$JAVA_HOME/bin/java $JVM_ARGS $log_setting --classpath $CLASSPATH eu.stratosphere.meteor.server.DOPAScheduler -configDir $STRATOSPHERE_CONF_DIR &
+		$JAVA_HOME/bin/java $JVM_ARGS $log_setting --classpath $CLASSPATH eu.stratosphere.meteor.server.DOPAScheduler --configDir $STRATOSPHERE_CONF_DIR &
 		echo $! > $pid
 	;;
 
