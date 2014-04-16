@@ -47,14 +47,14 @@ case $STARTSTOP in
                         fi
                 fi
                 echo Starting Scheduler
-		$JAVA_HOME/bin/java $JVM_ARGS $log_setting --classpath $CLASSPATH eu.stratosphere.meteor.server.DOPAScheduler --configDir $STRATOSPHERE_CONF_DIR &
+		$JAVA_HOME/bin/java $JVM_ARGS $log_setting --classpath $CLASSPATH eu.stratosphere.meteor.server.DOPAScheduler --configDir $STRATOSPHERE_CONF_DIR --clientRoot file:///0/stratdata/tmp/scheduler-root/ &
 		echo $! > $pid
 	;;
 
         (stop)
                 if [ -f $pid ]; then
                         if kill -0 `cat $pid` > /dev/null 2>&1; then
-                                echo Stopping Sopremo server
+                                echo Stopping scheduler
                                 kill `cat $pid`
                                 kill -9 `cat $pid`
                         else
